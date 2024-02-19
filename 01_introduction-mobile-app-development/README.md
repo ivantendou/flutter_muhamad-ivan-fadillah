@@ -4,4 +4,4 @@
 
 2. Pengembangan *software* menggunakan bahasa pemrograman yang diolah dengan *compiler/interpreter* hingga menghasilkan *output*.
 
-3. *Mobile App Development* adalah proses pengembangan untuk aplikasi *mobile* yakni iOS dan Android. Dalam hal ini bahasa pemgrogaman akan di-*compile* ke bentuk .apk untuk Android dan .ipa untuk iOS agar bisa menghasilkan dijalankan.
+3. *Mobile App Development* adalah proses pengembangan untuk aplikasi *mobile* yakni iOS dan Android. Dalam hal ini bahasa pemgrogaman akan di-*compile* ke bentuk .apk untuk Android dan .ipa untuk iOS agar bisa dijalankan.
