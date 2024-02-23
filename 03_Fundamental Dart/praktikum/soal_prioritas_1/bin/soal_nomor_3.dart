@@ -5,16 +5,14 @@
 */
 
 void main() {
-  String pemainSepakBola = "Nicolas Jackson";
+  int? nullableInt = null;
+
+  print("nullableInt = $nullableInt");
+
   /*
-    pemainSepakBola = null; -> ini akan menghasilkan error
-    nilai null tidak bisa di-assign ke variabel String karena String tidak nullable
+    Menggunakan coalescing operator (??), ini akan mengevaluasi ekspresi dan mengembalikan nilai 
+    dari ekspresi pertama jika itu bukan null.
   */
-
-  String? tokohAnime = "Tomozaki Fumiya";
-  tokohAnime = null;
-
-  print(pemainSepakBola);
-  print(
-      tokohAnime); // ketika diprint hasilnya bisa null karena String? adalah tipe data nullable
+  int nonNullableInt = nullableInt ?? 0;
+  print("nonNullableInt = $nonNullableInt");
 }
