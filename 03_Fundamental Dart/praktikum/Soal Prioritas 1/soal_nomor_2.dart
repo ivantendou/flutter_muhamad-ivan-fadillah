@@ -4,7 +4,7 @@
 */
 
 void main() {
-  final double phi = 3.14;
+  const double phi = 3.14;
   int r = 14;
   print("Diketahui sebuah lingkaran mempunyai jari-jari(r) = $r cm");
 
