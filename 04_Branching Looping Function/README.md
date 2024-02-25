@@ -1,4 +1,4 @@
-# (2) Branching - Looping - Function
+# (4) Branching - Looping - Function
 
 1. Ketika membuat program kita perlu menentukan alur pada suatu kondisi tertentu, sehingga program itu tidak hanya mengeksekusi kode secara berurutan saja, namun bisa kita buat pengambilan keputusan di dalamnya. Untuk menentukan alur program kita bisa menggunakan percabangan (*branching*) dan perulangan (*looping*). Untuk melakukan *branching* terdapat beberapa *keyword* sebagai berikut: **IF** untuk menentukan pengeksekusian blok kode di dalamnya berdasarkan kondisi *boolean*, jika *true* maka dieksekusi blok kodenya, namun jika *false* maka akan dilewatkan. **IF ELSE** menambah alternatif jika nilai *boolean* adalah *false*. **ELSE IF** menambah alternatif jika nilai *boolean* adalah false, ia akan menambah pengujian. **SWITCH** melakukan pemilihan blok kode berdasarkan nilai, *switch* menyederhanakan kondisi *multiple*.
 
