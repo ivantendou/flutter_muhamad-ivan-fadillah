@@ -1,0 +1,7 @@
+# (5) Advanced Function - Async Await - Collection
+
+1. Dengan *advanced function* saya belajar untuk memanfaatkan fitur-fitur fungsi tingkat lanjut untuk memecahkan berbagai studi kasus. Misalnya untuk meringkas kode bisa menggunakan *anonymous function* atau *arrow function* sesuai kondisi studi kasusnya. Kemudian jika kita kesulitan menggunakan parameter fungsi dalam jumlah banyak, kita bisa menggunakan *named parameter* dan *optional parameter*.
+
+2. Async Await berguna untuk menjalankan suatu operasi yang memakan waktu seperti *consume API*. Async adalah kata kunci untuk mendeklarasikan bahwa suatu fungsi akan berisi operasi asinkron. Sedangkan Await akan membuat Dart menunggu hasil fungsi sebelum mengeksekusi baris kode selanjutnya. Apabila ada kata kunci await tentu kita akan menggunakan tipe data *future* sebagai data yang dapat ditunggu dan ia akan membawa data return dari fungsi Async.
+
+3. Kita seringkali perlu untuk menyimpan sekumpulan data, untuk itu di Dart ada yang namanya *Collection*. *Collection* terdiri dari List, Set, dan Map. List dalam bahasa pemrograman lain adalah array, list di Dart dapat berisi beragam tipe data. Sementara itu, Set berisi data-data yang unik (tidak ada duplikasi). Map menyimpan data dalam format *key-value*.
