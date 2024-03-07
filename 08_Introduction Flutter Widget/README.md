@@ -1,0 +1,7 @@
+# (8) Introduction Flutter Widget
+
+1. Flutter adalah alat pengembangan antarmuka pengguna yang digunakan untuk membuat aplikasi mobile, dekstop, dan web. Flutter mudah digunakan dan dipelajari, memiliki produktivitas tinggi karena bisa sekaligus menghasilkan aplikasi untuk banyak platform (multi-platform), Flutter juga punya dokumentasi yang lengkap dan komunitas yang berkembang. Bagian dari Flutter ialah Framework dan SDK (Software Development Kit) yang berisi alat-alat untuk membantu proses pengembangan aplikasi.
+
+2. Struktur Direktori proyek Flutter diantaranya ada direktori platform: android, ios, web. Ada direktori proyek: lib (semua file kode utama disimpan di sini) dan test (untuk aktivitas pengujian).
+
+3. Flutter adalah Widget itu sendiri. Widget digunakan untuk membentuk antarmuka (UI) yang dapat terdiri dari beberapa widget lainnya. Terdapat 2 jenis utama widget: *stateless* dan *stateful* widget. Stateless widget tidak bergantung pada perubahan data, sedangkan statefull widget mementingkan pada perubahan data. Jadi jika ingin menampilkan data yang berubah secara realtime, kita harus pakai statefull widget. Terdapat pula *built in widget* bawaan Flutter seperti text, container, row, column, dll. Terakhir ada Flutter MaterialApp, widget ini bisa diibaratkan sebagai tanah, dan kita akan membangun sebuah rumah di tanah itu. Di MateriapApp kita membuat halaman dengan Scaffold, AppBar, dan widget-widget lainnya.
