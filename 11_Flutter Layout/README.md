@@ -1,0 +1,7 @@
+# (11) Flutter Layout
+
+1. Untuk mengatur tata letak kita dapat memanfaatkan Layout. Layout ini berbentuk widget yang mengatur widget di dalamnya. Terdapat dua jenis Layout yang bisa kita gunakan di Flutter yaitu Single-child Layout dan Multi-child Layout.
+
+2. Single-child Layout diantaranya ada Container, SizedBox, dan Center. Container bisa kita gunakan untuk membuat sebuah kotak (box) untuk membungkus sebuah widget lain di bawahnya, box ini memiliki margin, padding, dan border yang bisa kita atur. Ada juga Center yang bisa kita gunakan untuk meletakkan widget supaya berada di bagian tengah. Terakhir ada SizedBox, versi sederhana dari Container yang hanya bisa mengatur width dan height.
+
+3. Multi-child Layout adalah Layout yang memiliki banyak widget di dalamnya, contohnya Column, Row, ListView, dan GridView. Untuk mengatur sekumpulan widget secara vertikal, kita bisa menggunakan Column. Sebaliknya untuk mengatur widget-widget secara horizontal kita bisa menggunakan Row. Lalu jika ingin mengatur widget-widget dalam sebuah List kita bisa menggunakan ListView, ListView ini memiliki kemampuan scroll. Terdapat varian lain dari ListView seperti ListView.builder dan ListView separated. Sementara itu GridView mengatur widget-widget dalam bentuk galeri, kita bisa mengatur ingin berapa baris widget di dalamnya menggunakan crossAxisCount.
