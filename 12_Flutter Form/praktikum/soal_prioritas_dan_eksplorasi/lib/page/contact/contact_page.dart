@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:soal_prioritas_dan_eksplorasi/page/contact/widget_contact/contact_form_header.dart';
-import 'package:soal_prioritas_dan_eksplorasi/widget/text_form_field_custom.dart';
-import 'package:soal_prioritas_dan_eksplorasi/constant/color_constant.dart';
+import 'package:soal_prioritas_dan_eksplorasi/page/contact/widget_contact/contact_form_header_widget.dart';
+import 'package:soal_prioritas_dan_eksplorasi/page/contact/widget_contact/contact_form_widget.dart';
+import 'package:soal_prioritas_dan_eksplorasi/page/contact/widget_contact/contact_list_item_widget..dart';
 
 class ContactModel {
   final String name;
@@ -36,6 +36,12 @@ class _ContactsPageState extends State<ContactsPage> {
       numberController.text = contactList[index].number;
       isEditing = true;
       editingIndex = index;
+    });
+  }
+
+  void deleteContact(int index) {
+    setState(() {
+      contactList.removeAt(index);
     });
   }
 
@@ -113,111 +119,22 @@ class _ContactsPageState extends State<ContactsPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const ContactFormHeader(),
-                TextFormFieldCustom(
-                  controller: nameController,
-                  labelText: 'Name',
-                  hintText: 'Insert Your Name',
-                  validator: validateName,
+                ContactListWidget(
+                  onPressed: onSubmit,
+                  nameController: nameController,
+                  numberController: numberController,
+                  nameValidator: validateName,
+                  numberValidator: validatePhoneNumber,
+                  isEditing: isEditing,
                 ),
                 const SizedBox(
                   height: 16.0,
                 ),
-                TextFormFieldCustom(
-                  controller: numberController,
-                  isValidInputForPhone: true,
-                  labelText: 'Number',
-                  hintText: '+62 ...',
-                  keyboardType: true,
-                  validator: validatePhoneNumber,
+                ContactListItem(
+                  contactList: contactList,
+                  onEditPressed: editContact,
+                  onDeletePressed: deleteContact,
                 ),
-                const SizedBox(
-                  height: 16.0,
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                        ColorConstant.backgroundColor,
-                      ),
-                    ),
-                    onPressed: onSubmit,
-                    child: Text(
-                      isEditing ? 'Edit' : 'Submit',
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 14.0,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 16.0,
-                ),
-                const Text(
-                  'List Contacts',
-                  style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w400),
-                ),
-                const SizedBox(
-                  height: 16.0,
-                ),
-                contactList.isEmpty
-                    ? const Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: 24.0,
-                            ),
-                            Icon(
-                              Icons.contact_emergency,
-                              size: 24,
-                            ),
-                            Text('Empty contact'),
-                          ],
-                        ),
-                      )
-                    : ListView.builder(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: contactList.length,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.only(left: 16, right: 16),
-                            child: ListTile(
-                              contentPadding: EdgeInsets.zero,
-                              leading: CircleAvatar(
-                                child: Text(contactList[index].name[0]),
-                              ),
-                              title: Text(
-                                contactList[index].name,
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                              subtitle: Text(contactList[index].number),
-                              trailing: Wrap(
-                                children: [
-                                  IconButton(
-                                    onPressed: () {
-                                      editContact(index);
-                                    },
-                                    icon: const Icon(Icons.edit),
-                                  ),
-                                  IconButton(
-                                    onPressed: () {
-                                      setState(() {
-                                        contactList.removeAt(index);
-                                      });
-                                    },
-                                    icon: const Icon(Icons.delete),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          );
-                        },
-                      ),
               ],
             ),
           ),
