@@ -66,6 +66,11 @@ class _ContactsPageState extends State<ContactsPage> {
       nameController.clear();
       numberController.clear();
       setState(() {});
+
+      print("Contact List:");
+      for (var contact in contactList) {
+        print("Name: ${contact.name}, Number: ${contact.number}");
+      }
     }
   }
 
