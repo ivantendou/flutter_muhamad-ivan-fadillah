@@ -3,6 +3,7 @@ import 'package:code_competence_1/constant/color_constant.dart';
 import 'package:code_competence_1/constant/text_style_constant.dart';
 import 'package:code_competence_1/widget/welcome_section_widget.dart';
 import 'package:code_competence_1/widget/contact_us_section_widget.dart';
+import 'package:code_competence_1/widget/submit_success_alert_widget.dart';
 
 class MessageModel {
   final String username;
@@ -66,61 +67,11 @@ class _ContactPage extends State<ContactPage> {
         message: messageController.text,
       ));
 
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return PopScope(
-            canPop: false,
-            child: AlertDialog(
-              title: const Column(
-                children: [
-                  Icon(Icons.check_circle),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Text(
-                    'Pesan Berhasil Dikirim',
-                  ),
-                ],
-              ),
-              content: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    'Username: ${usernameController.text}',
-                    style: TextStyleConstant.contentStyle,
-                  ),
-                  Text(
-                    'Email: ${emailController.text}',
-                    style: TextStyleConstant.contentStyle,
-                  ),
-                  Text(
-                    'Pesan: ${messageController.text}',
-                    style: TextStyleConstant.contentStyle,
-                  ),
-                ],
-              ),
-              actions: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                    usernameController.clear();
-                    emailController.clear();
-                    messageController.clear();
-                    setState(() {});
-                  },
-                  child: Text(
-                    'Oke',
-                    style: TextStyleConstant.subtitleStyle.copyWith(
-                      color: Colors.blue[700],
-                    ),
-                  ),
-                )
-              ],
-            ),
-          );
-        },
+      showSuccessDialog(
+        context,
+        usernameController,
+        emailController,
+        messageController,
       );
     }
   }
