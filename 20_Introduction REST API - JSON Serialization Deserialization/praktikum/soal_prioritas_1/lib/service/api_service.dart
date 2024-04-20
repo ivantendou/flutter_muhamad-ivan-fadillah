@@ -15,7 +15,6 @@ class ApiService {
         url,
         data: contactModelToJson(contactData),
       );
-
       if (response.statusCode == 201) {
         return 'User Created Successfully';
       }
