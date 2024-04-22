@@ -67,7 +67,7 @@ void main() {
     expect(find.byType(Divider), findsOneWidget);
   });
 
-  testWidgets('Contact Form Header UI Test', (WidgetTester tester) async {
+  testWidgets('Contact Form UI Test', (WidgetTester tester) async {
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
@@ -108,16 +108,5 @@ void main() {
     expect(find.text('File: No file selected'), findsOneWidget);
     await tester.tap(find.text('Submit'));
     await tester.pumpAndSettle();
-  });
-
-  testWidgets('Contact Form Header UI Test', (WidgetTester tester) async {
-    await tester.pumpWidget(
-      MaterialApp(
-        home: ChangeNotifierProvider<ContactViewModel>(
-          create: (_) => ContactViewModel(),
-          child: const ContactScreen(),
-        ),
-      ),
-    );
   });
 }
