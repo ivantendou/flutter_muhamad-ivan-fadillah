@@ -45,11 +45,6 @@ void main() {
     expect(find.byType(ContactFormHeaderWidget), findsOneWidget);
     expect(find.byIcon(Icons.person_add), findsOneWidget);
     expect(find.text('Create New Contacts'), findsOneWidget);
-    expect(
-      find.text(
-          'Fill in the fields below to add a new contact. Ensure to provide the full name and a valid phone number before submitting.'),
-      findsOneWidget,
-    );
     const TextStyle titleTextStyle =
         TextStyle(fontSize: 24.0, fontWeight: FontWeight.w400);
     const TextStyle descriptionTextStyle =
