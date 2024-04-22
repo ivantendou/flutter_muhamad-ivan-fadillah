@@ -8,6 +8,7 @@ import 'package:contacts_app_mvvm/screens/contact/contact_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  // SOAL PRIORITAS 1
   // Bukalah tugas (@11. Soal Form & Advance Form Input  ). Lakukan Test seluruh
   // halaman yang pernah dibuat pada bagian judul, body, dan seluruh elemen yang
   // ada pada halaman tersebut.
